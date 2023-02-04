@@ -1,1 +1,3 @@
-# invitacionvalentina
+- Falta el archivo invitacion.png en la carpeta public/image/
+- Confirmar que la fecha es el 18 de marzo de 2023
+- 
