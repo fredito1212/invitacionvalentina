@@ -67,7 +67,7 @@ html {
 .hero .tempatwaktu {
   padding-top: 35px;
   font-size: 1.3rem;
-  
+
 }
 
 .hero .hero-foot {
@@ -126,7 +126,7 @@ html {
 
 .main-content {
   padding-top: 2rem;
-  color: #000; 
+  color: #000;
   font-family: 'Raleway', sans-serif;
 }
 
@@ -176,7 +176,7 @@ html {
 
 .main-content .section-cashbac {
   background-color: rgb(238, 250, 253);
-  padding: 80px 40px; 
+  padding: 80px 40px;
 }
 
 @media (max-width: 599px) {
@@ -351,7 +351,7 @@ vertical-align: middle;
   text-align: center;
   vertical-align: middle;
   background: #c28285;
-  color: whitesmoke;    
+  color: whitesmoke;
 }
 
 .footer p {
@@ -392,7 +392,7 @@ vertical-align: middle;
 .bismillah {
   margin: 25px;
   display: inline-block;
-  max-height: 50px;
+  max-height: 150px;
   vertical-align: middle;
 }
 
@@ -476,7 +476,7 @@ body.preloader-site {
   height: 65px;
   color: white;
   font-size: 1.2rem;
-  border-radius: 10px;  
+  border-radius: 10px;
   border-left: 1px solid #6cc751;
   border-right: 1px solid #6cc751;
   border-top: 1px solid #6cc751;

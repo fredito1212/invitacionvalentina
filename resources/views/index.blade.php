@@ -5,7 +5,7 @@
     <meta name="theme-color" content="#BC8887" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Undangan Pernikahan Sherly & Daeng</title>
+    <title>Bautizo de Valentina Bravo Andrade - Sabado 18 Marzo 2023</title>
 
     <meta property="og:title" content="Bautizo de Valentina Bravo Andrade - Sabado 18 Marzo 2023">
     <meta property="og:description" content="Bautizo de Valentina Bravo Andrade - Sabado 18 Marzo 2023">
@@ -92,7 +92,7 @@
         <div class="hero-body">
           <div class="container has-text-centered">
             <h1 class="subtitle">Mi Bautizo</h1>
-            <h2 class="title">Aislin Valentina Bravo Andrade</h2>
+            <h2 class="title">Aislin Valentina<br>Bravo Andrade</h2>
             <h4 class="subtitle tempatwaktu">
 
                 Sabado 18 Marzo 2023
@@ -139,20 +139,20 @@
               <div class="column is-12 hero-menu-desktop has-text-centered">
                 <ul>
                   <li class="is-active">
-                    <a href="#home">Invitación</a>
+                    <a href="#home"><i class="fa-solid fa-envelope fa-bounce"></i> Invitación</a>
                   </li>
                   <li>
-                    <a href="#Waktu">Fecha</a>
+                    <a href="#Waktu"><i class="fa-solid fa-calendar-day fa-flip" style="--fa-animation-duration: 3s;"></i> Fecha</a>
                   </li>
                   <li>
-                    <a href="#lokasi">Ubicación</a>
+                    <a href="#lokasi"><i class="fa-solid fa-location-dot fa-shake"></i> Ubicación</a>
                   </li>
                   <li>
-                    <a href="#tentang-sherly-daeng">Tentang Sherly & Daeng</a>
+                    <a href="#tentang-sherly-daeng"><i class="fa-solid fa-heart fa-beat"></i> Mis fotos</a>
                   </li>
 
                   <li>
-                    <a href="#rsvp">RSVP</a>
+                    <a href="#rsvp"><i class="fa-solid fa-check-double fa-fade"></i> Asistencia</a>
                   </li>
                 </ul>
               </div>
@@ -171,15 +171,22 @@
      <section class="section-light no-padding-top regular-section has-text-centered has-vertically-aligned-content" id="regular-section">
 
         <div data-aos="fade-up" data-aos-easing="linear">
-          <img src="image/bismillah.png" class="bismillah has-text-centered" alt="Bismillahirrahmaanirrahiim">
+          <img src="image/cruz-religiosa-floral-acuarela-sobre-fondo-blanco_82758-385.png" class="bismillah has-text-centered" alt="Bismillahirrahmaanirrahiim">
         </div>
-
+        <span class="space40px"></span>
         <p class="bodytext" data-aos="fade-up" data-aos-easing="linear">
-          Assalamu'alaikum Warahmatullahi Wabarakatuh.
-          <br />
-          Dengan memohon rahmat dan ridha Allah swt,
-          <br />
-          kami bermaksud mengundang Bapak/Ibu/Saudara/Saudari pada acara pernikahan kami
+            Doy Gracias a Dios nuestro señor por darme el don de la vida.
+            <br>A mis padres por esperarme con amor y recibirme con alegría.
+            <br>A mis padrinos por guiarme en el camino de la luz.
+            <br>Y a ti por acompañarme en uno de los días mas importantes de mi vida.
+            <br>Familia y amigos, estoy lista para recibir mi nombre.
+        </p>
+        <span class="space40px"></span>
+        <hr>
+        <span class="space40px"></span>
+        <p class="bodytext" data-aos="fade-up" data-aos-easing="linear">
+            En este hermoso día en que Dios llega a mí por primera vez,
+            <br />desearía poder compartir mi alegría con ustedes y junto a mis padres:
         </p>
 
         <span class="space40px"></span>
@@ -187,11 +194,11 @@
 
         <div data-aos="fade-up" data-aos-easing="linear">
           <div class="nama-lengkap" >
-            Sherly Jayanti, S.Par.
+            Sergio Andrade Cortez
           </div>
           <div class="ampersand">&</div>
           <div class="nama-lengkap">
-          Daeng Muhammad Feisal, S.Kom.
+            Zaida Elizabeth Bravo Mendez
           </div>
 
         </div>
@@ -209,48 +216,40 @@
         <div class="container">
 
           <div class="column is-12 regular-section" data-aos="fade-up" data-aos-easing="linear">
-            <h1 class="title has-text-centered section-title">Waktu</h1>
+            <h1 class="title has-text-centered section-title"><i class="fa-solid fa-calendar-day fa-flip" style="--fa-animation-duration: 3s;"></i> Fecha</h1>
           </div>
           <div class="columns is-multiline" data-aos="fade-up" data-aos-easing="linear">
             <div
               class="column is-4 has-vertically-aligned-content">
 
               <p class="is-larger has-text-centered">
-                  <div class="waktu tanggal-hari has-text-centered">Sabtu</div>
-                  <div class="waktu tanggal-angka has-text-centered">21</div>
-                  <div class="waktu tanggal-bulan has-text-centered">Maret 2020</div>
+                  <div class="waktu tanggal-hari has-text-centered">Sabado</div>
+                  <div class="waktu tanggal-angka has-text-centered">18</div>
+                  <div class="waktu tanggal-bulan has-text-centered">Marzo 2023</div>
               </p>
-
             </div>
             <div class="column is-4 has-vertically-aligned-content">
-
               <p class="waktu is-larger has-text-centered">
-                Akad Nikah:
+                Misa:
                 <br>
-                <strong>17.00 WIB</strong>
+                <strong>13:00 Hrs</strong>
               </p>
-
             </div>
-
             <div class="column is-4 has-vertically-aligned-content">
-
               <h1 class="waktu is-larger has-text-centered">
-                Resepsi:
+                Celebración:
                 <br>
-                <strong>19.00  - 21.00 WIB</strong>
+                <strong>15:00  - 21:00 Hrs</strong>
               </h1>
-
-
             </div>
-
           </div>
         </div>
         <div class="space40px"></div>
         <div class="main-content has-text-centered" data-aos="fade-up" data-aos-easing="linear">
-          <a href="https://calendar.google.com/event?action=TEMPLATE&amp;tmeid=NGgzdW00NG84dXFwMzcwNXYxbGliNGxzaWggZGFlbmdkb2FuZ0Bt&amp;tmsrc=daengdoang%40gmail.com" target="_blank" class="button has-tooltip btn-cta" data-tooltip="Add to Calendar" target="_blank" data-aos="zoom-in">
-            <i class="far fa-calendar-plus"></i>
-            &nbsp;&nbsp;Google Calendar
-          </a>
+            <a class="button has-tooltip btn-cta" data-tooltip="Add to Calendar" target="_blank" data-aos="zoom-in" target="_blank" href="https://calendar.google.com/calendar/event?action=TEMPLATE&amp;tmeid=MWhhOW4zZjg3M2c4M2JsdXFqZHJlZHRwbW0gNWM1YTJjMGU2YzkzYmE0MTRhNDUyYmMyZDhiOWU2ODYwNTU1M2VjOTYxNmVjODdiODc3YTNkMmUyODVhOTJmYkBn&amp;tmsrc=5c5a2c0e6c93ba414a452bc2d8b9e68605553ec9616ec87b877a3d2e285a92fb%40group.calendar.google.com">
+                <i class="far fa-calendar-plus"></i>
+                &nbsp;&nbsp;Google Calendar
+            </a>
         </div>
       </section>
       <!-- End Waktu Content -->
@@ -259,23 +258,23 @@
       <section class="section-darker" id="lokasi" >
         <div class="container">
           <div class="column is-12 regular-section" data-aos="fade-up" data-aos-easing="linear">
-            <h1 class="title has-text-centered section-title">Lokasi</h1>
+            <h1 class="title has-text-centered section-title"><i class="fa-solid fa-location-dot fa-shake"></i> Ubicación</h1>
             <p class="tempat is-larger has-text-centered">
-              <strong>RM Pondok Kenanga</strong>
+              <strong>Parroquia de San Juan Bautista</strong>
               <br>
-              Jl. Kenanga Raya No.9, RT.001/RW.006A, Jakasampurna,
+              Francisco Nieto Rodríguez s/n,
               <br>
-              Kec. Bekasi Barat, Kota Bekasi, Jawa Barat
+              Tenencia Morelos, 58341 Morelos, Mich.
               <br>
             </p>
           </div>
           <div class="section-map" data-aos="fade-up" data-aos-easing="linear">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.1280267408406!2d106.9691569150978!3d-6.246854895478259!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698d5988a190d9%3A0x22b6a052b0a6a5f3!2sRM.%20Pondok%20Kenanga!5e0!3m2!1sen!2sid!4v1579433583123!5m2!1sen!2sid" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3757.4742105242763!2d-101.23761359999999!3d19.6497641!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842d0c647a272d0b%3A0x8c4e170081424704!2sParroquia%20de%20San%20Juan%20Bautista!5e0!3m2!1ses-419!2smx!4v1675545993806!5m2!1ses-419!2smx" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
           <div class="space40px"></div>
           <div class="has-text-centered" data-aos="fade-up" data-aos-easing="linear">
-            <a href="https://maps.google.com/maps?ll=-6.246855,106.971346&z=16&t=m&hl=en&gl=ID&mapclient=embed&daddr=RM.%20Pondok%20Kenanga%20Jl.%20Kenanga%20Raya%20No.9%20RT.001%2FRW.006A%2C%20Jakasampurna%20Bekasi%20Barat%2C%20Bekasi%20City%2C%20West%20Java%2017145@-6.2468549,106.9713456" class="button btn-cta" target="_blank" data-aos="zoom-in">
-              <i class="far fa-directions"></i>
+            <a href="https://www.google.com/maps/dir//Parroquia+de+San+Juan+Bautista,+Francisco+Nieto+Rodríguez+s%2Fn,+Tenencia+Morelos,+58341+Morelos,+Mich./@19.6497641,-101.2376136,17z/data=!4m16!1m6!3m5!1s0x842d0c647a272d0b:0x8c4e170081424704!2sParroquia+de+San+Juan+Bautista!8m2!3d19.6497743!4d-101.2376136!4m8!1m0!1m5!1m1!1s0x842d0c647a272d0b:0x8c4e170081424704!2m2!1d-101.2376136!2d19.6497743!3e3?hl=es-MX" class="button btn-cta" target="_blank" data-aos="zoom-in">
+              <i class="fas fa-directions"></i>
               &nbsp;&nbsp;Google Maps
             </a>
           </div>
@@ -288,11 +287,13 @@
         <div class="container">
           <div class="columns is-multiline">
           <div class="column has-text-centered is-12 prolog">
-            <h1 class="title has-text-centered section-title" data-aos="fade-up" data-aos-easing="linear">Tentang Sherly dan Daeng</h1>
+            <h1 class="title has-text-centered section-title" data-aos="fade-up" data-aos-easing="linear"><i class="fa-solid fa-heart fa-beat"></i> Mis fotos</h1>
 
+            <div class="column is-12 regular-section" data-aos="fade-up" data-aos-easing="linear">
+                <h1 class="title has-text-centered section-title">Proximamente</h1>
+            </div>
 
-
-          <!-- IMAGES -->
+        {{-- <!-- IMAGES -->
         <div class=" tile">
           <div class="tile is-ancestor">
           <div class="tile is-parent">
@@ -357,7 +358,7 @@
             </div>
           </article>
         </div>
-      </div>
+      </div> --}}
           <!-- IMAGES -->
           <div class="space40px"></div>
             <div data-aos="fade-up" data-aos-easing="linear">
@@ -376,39 +377,38 @@
         <div class="container">
           <div class="columns is-multiline">
             <div class="column is-12 prolog">
-              <h1 class="title has-text-centered section-title" data-aos="fade-up" data-aos-easing="linear">Konfirmasi Kehadiran</h1>
+              <h1 class="title has-text-centered section-title" data-aos="fade-up" data-aos-easing="linear"><i class="fa-solid fa-check-double fa-fade"></i> Asistencia</h1>
             </div>
             <div class="column is-12 prolog has-text-centered" data-aos="fade-up" data-aos-easing="linear">
               <p class="h2 subtitle">
-                Merupakan suatu kehormatan dan kebahagiaan bagi kami
+                Es un honor y una felicidad para nosotros
                 <br>
-                apabila Bapak/Ibu/Saudara/Saudari berkenan hadir
-                memberikan doa restu.
-                <br>
-                <br>
-                Jika bisa hadir kami tunggu konfirmasinya,
-                <br>
-                Informasi: Di meja penerima tamu akan kami sediakan hand sanitizer dan pemeriksaan suhu tubuh.
+                que aceptes la invitación a está ceremonia tan importante
                 <br>
                 <br>
-                Jika tidak memungkinkan untuk hadir di pernikahan kami,tidak mengapa,
-                <br>
-                semoga bisa berjumpa di lain kesempatan
+                Si pudieras asistir esperamos tu confirmación
                 <br>
                 <br>
-                Stay safe & jaga kesehatan ya :)
+                Si no es posible asistir a nuestra celebración, está bien,
+                <br>
+                esperamos verte muy pronto
+                <br>
+                <br>
+                Información:
+                <br>En la celebración, proporcionaremos desinfectante para manos
+                <br>y controles de temperatura corporal.
                 </p>
 
-              <a href="https://api.whatsapp.com/send?phone=628xxxxxxxxxx&text=Halo%20Sherly,%20saya%20akan%20datang%20di%20acara%20pernikahan&source=&data=" class="button btn-whatsapp" target="_blank" data-aos="zoom-in">
+              <a href="https://api.whatsapp.com/send?phone=4431346878&text=Hola%20Zaida,%20quiero%20asistir%20al%20bautizo%20de%20Valentina&source=&data=" class="button btn-whatsapp" target="_blank" data-aos="zoom-in">
                 <i class="fab fa-whatsapp"></i>
-                &nbsp;&nbsp;Kabari Sherly
+                &nbsp;&nbsp;Zaida Elizabeth
               </a>
 
 
 
-              <a href="https://api.whatsapp.com/send?phone=628xxxxxxxxxx&text=Halo%20Daeng,%20saya%20akan%20datang%20di%20acara%20pernikahan&source=&data=" class="button btn-whatsapp" target="_blank" data-aos="zoom-in">
+              <a href="https://api.whatsapp.com/send?phone=4431016294&text=Hola%20Sergio,%20quiero%20asistir%20al%20bautizo%20de%20Valentina&source=&data=" class="button btn-whatsapp" target="_blank" data-aos="zoom-in">
                 <i class="fab fa-whatsapp"></i>
-                &nbsp;&nbsp; Kabari Daeng
+                &nbsp;&nbsp; Sergio
               </a >
               <div class="space40px"></div>
 
@@ -418,15 +418,15 @@
               </div>
               <div class="space40px"></div>
               <p class="h2 subtitle" data-aos="fade-up" data-aos-easing="linear">
-                Kami yang berbahagia,
-                <br>
+                Familia Bravo Andrade
+                {{-- <br>
                 <a class="instagram":" href="https://instagram.com/nengchely" target="_blank" alt="Instagram Sherly">
                   <i class="fab fa-instagram"></i> @nengchely
                 </a>
                 &nbsp
                 <a class="instagram" href="https://instagram.com/daengdoang" target="_blank" alt="Instagram Daeng">
                   <i class="fab fa-instagram"></i> @daengdoang
-                </a>
+                </a> --}}
               </p>
 
             </div>
