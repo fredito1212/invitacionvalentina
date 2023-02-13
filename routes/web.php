@@ -15,6 +15,13 @@ use App\Http\Controllers\invitacionController;
 */
 
 Route::get('/', [invitacionController::class, 'index']);
+Route::get('/invitaciones', [invitacionController::class, 'invitaciones'])->name('invitaciones');
+Route::post('/invitaciones/registrar', [invitacionController::class, 'registrar']);
+Route::post('/invitaciones/actualizar', [invitacionController::class, 'actualizar']);
+Route::post('/invitaciones/eliminar', [invitacionController::class, 'eliminar']);
+Route::get('/{codigo}', [invitacionController::class, 'confirmacion'])->name('confirmar');
+Route::post('/{codigo}/confirmar', [invitacionController::class, 'confirmar']);
+
 
 // Route::get('/', function () {
 //     return view('welcome');
