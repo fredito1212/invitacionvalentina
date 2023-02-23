@@ -28,30 +28,21 @@
             <p class="bodytext" data-aos="fade-up" data-aos-easing="linear">
                 Junto a mis padres:
             </p>
+            <div class="mt-6" data-aos="fade-up" data-aos-easing="linear">
+                <div class="nama-lengkap" >
+                    Sergio Andrade Cortez
+                </div>
+                <div class="ampersand">&</div>
+                <div class="nama-lengkap">
+                    Zaida Elizabeth Bravo Mendez
+                </div>
+            </div>
         </div>
         <div class="column">
             <p class="bodytext" data-aos="fade-up" data-aos-easing="linear">
                 Y mis padrinos:
             </p>
-        </div>
-    </div>
-    <span class="space40px"></span>
-    <span class="space40px"></span>
-    <div class="columns">
-        <div class="column">
-
-            <div data-aos="fade-up" data-aos-easing="linear">
-                <div class="nama-lengkap" >
-                  Sergio Andrade Cortez
-                </div>
-                <div class="ampersand">&</div>
-                <div class="nama-lengkap">
-                  Zaida Elizabeth Bravo Mendez
-                </div>
-            </div>
-        </div>
-        <div class="column">
-            <div data-aos="fade-up" data-aos-easing="linear">
+            <div class="mt-6"  data-aos="fade-up" data-aos-easing="linear">
                 <div class="nama-lengkap">
                   Jesús Alfredo Bravo Méndez
                 </div>
@@ -59,11 +50,9 @@
                 <div class="nama-lengkap">
                   Yvonne Gutierrez Moreno
                 </div>
-              </div>
+            </div>
         </div>
     </div>
-
-
     {{-- <span class="space40px"></span>
     <p class="bodytext" data-aos="fade-up" data-aos-easing="linear">
         Y mis padrinos:

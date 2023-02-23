@@ -5,6 +5,8 @@
       <div class="column has-text-centered is-12 prolog">
         <h1 class="title has-text-centered section-title" data-aos="fade-up" data-aos-easing="linear"><i class="fa-solid fa-heart fa-beat"></i> Mis fotos</h1>
 
+
+
         <div class="column is-12 regular-section" data-aos="fade-up" data-aos-easing="linear">
             <h1 class="title has-text-centered section-title">Proximamente</h1>
         </div>
@@ -80,10 +82,12 @@
         <div data-aos="fade-up" data-aos-easing="linear">
           <img src="image/divider-leaves.png" class="divider has-vertically-align" alt="~~~">
         </div>
+        <button class="button is-success modal-button" data-target="modalfotos" aria-haspopup="true">
+            <i class="fas fa-camera"></i>&nbsp;&nbsp; Subir fotos
+        </button>
         <div class="space40px"></div>
-        <div class="space40px"></div>
-
       </div>
     </div>
   </section>
+
   <!-- End Tentang Sherly dan Daeng -->

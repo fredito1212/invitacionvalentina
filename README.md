@@ -8,3 +8,7 @@
 - carrusel de fotos del evento
 - Modal de confirmación de asistencia
 - Visualización de fotos invitados y aceptación al portal
+
+valentina
+vale
+fhUe*B_nXT1HQDip

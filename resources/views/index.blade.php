@@ -4,13 +4,13 @@
     <meta charset="utf-8" />
     <meta name="theme-color" content="#BC8887" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bautizo de Valentina Bravo Andrade - Sabado 18 Marzo 2023</title>
 
     <meta property="og:title" content="Bautizo de Valentina Bravo Andrade - Sabado 18 Marzo 2023">
     <meta property="og:description" content="Bautizo de Valentina Bravo Andrade - Sabado 18 Marzo 2023">
     <meta property="og:locale" content="es_MX" />
-    <meta property="og:image" content="{{ asset('/image/invitacion.png') }}">
+    <meta property="og:image" content="{{ asset('/image/invitacionMisa.jpeg') }}">
     <meta name="twitter:card" content="summary_large_image">
     <!-- Bulma Version 0.8.x-->
     {{-- <link rel="stylesheet" href="https://unpkg.com/bulma@0.8.0/css/bulma.min.css" /> --}}
@@ -24,7 +24,7 @@
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
     <script src="{{ asset('js/jquery.coundown.js') }}"></script>
-    <link rel="icon" type="{{ asset('image/png') }}" href="image/favicon.png" />
+    <link rel="icon" type="image/png" href="{{ asset('image/favicon.png') }}" />
     <!-- Begin Script for Countdown -->
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -99,7 +99,22 @@
       </div>
     </div>
     <!-- End Footer -->
-
+    <div class="modal" id="modalfotos">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+          <header class="modal-card-head">
+            <p class="modal-card-title">Modal title</p>
+            <button class="delete" aria-label="close"></button>
+          </header>
+          <section class="modal-card-body">
+            <!-- Content ... -->
+          </section>
+          <footer class="modal-card-foot">
+            <button class="button is-success">Save changes</button>
+            <button class="button">Cancel</button>
+          </footer>
+        </div>
+    </div>
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="{{ asset('js/menikah.js') }}"></script>

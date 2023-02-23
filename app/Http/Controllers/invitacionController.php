@@ -48,6 +48,8 @@ class invitacionController extends Controller
         $registrar->invitados = $invitados;
         $registrar->codigo = $this->generarCodigo();
         $registrar->save();
+
+
         return redirect()->route('invitaciones')->with('success','Registro de invitado correcto!');
     }
 

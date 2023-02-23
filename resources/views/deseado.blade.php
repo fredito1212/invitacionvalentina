@@ -22,17 +22,20 @@
                         GRACIAS POR TU CONFIRMACIÓN
                         <br>
                     </p>
+                    {!! QrCode::size(300)->generate($datos->codigo) !!}
+
+
                     <p class="h2 subtitle">
                         <br>
                         Descarga las invitaciones
                     </p>
-                    <a href="/image/invitacionMisa.jpeg" download class="button is-rounded is-medium is-info mr-4"
+                    <a href="/image/invitacionMisa.jpeg" download class="button is-rounded is-medium is-info mr-2 ml-2"
                         target="_blank" data-aos="zoom-in">
                         <i class="fas fa-church"></i>
                         &nbsp;&nbsp;Misa
                     </a>
 
-                    <a href="/image/invitacionSalon.jpeg" download class="button is-rounded is-medium is-primary"
+                    <a href="/image/invitacionSalon.jpeg" download class="button is-rounded is-medium is-primary mt-4 mr-2 ml-2"
                         target="_blank" data-aos="zoom-in">
                         <i class="fas fa-umbrella-beach"></i>
                         &nbsp;&nbsp;Ceremonia
