@@ -46,7 +46,7 @@
                 <div class="nama-lengkap">
                   Jesús Alfredo Bravo Méndez
                 </div>
-                <div class="ampersand">&</div>
+                <div class="ampersand">E</div>
                 <div class="nama-lengkap">
                   Yvonne Gutierrez Moreno
                 </div>

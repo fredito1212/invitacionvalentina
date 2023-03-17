@@ -29,7 +29,7 @@
                         <br>
                         Descarga las invitaciones
                     </p>
-                    <a href="/image/invitacionMisa.jpeg" download class="button is-rounded is-medium is-info mr-2 ml-2"
+                    <a href="/image/invitacionMisa.jpeg" download class="button is-rounded is-medium is-info mt-4 mr-2 ml-2"
                         target="_blank" data-aos="zoom-in">
                         <i class="fas fa-church"></i>
                         &nbsp;&nbsp;Misa
@@ -89,7 +89,7 @@
                 </div>
                 <div class="space40px"></div>
                 <p class="h2 subtitle" data-aos="fade-up" data-aos-easing="linear">
-                    Familia Bravo Andrade
+                    Familia Andrade Bravo
                 </p>
 
             </div>

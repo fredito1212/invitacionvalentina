@@ -5,89 +5,62 @@
       <div class="column has-text-centered is-12 prolog">
         <h1 class="title has-text-centered section-title" data-aos="fade-up" data-aos-easing="linear"><i class="fa-solid fa-heart fa-beat"></i> Mis fotos</h1>
 
+        @if (date("d/m/Y") != '18/03/2023' || date("d/m/Y") == '19/03/2023' || date("d/m/Y") == '20/03/2023' || date("d/m/Y") == '21/03/2023')
+            @php
+                $rand = rand(1,3);
+                $contador = 0;
+            @endphp
+            {{-- {{ $rand }} --}}
+            <div class="tile is-ancestor">
+            @foreach ($listado as $l)
+                @if ($rand == $contador)
+                    @php $contador = 0;
+                    while(True){
+                        $new = rand(1,3);
+                        if ($new != $rand){
+                            // echo $rand.'-'.$new;
+                            $rand = $new;
+                            break;
+                        }
+                    }
+                    @endphp
+                    </div>
+                    {{-- {{ $rand }} --}}
+                    <div class="tile is-ancestor">
+                @endif
+                <div class="tile is-parent">
+                    <article onclick="cargarFotos('{{ $l['codigo'] }}');" class="tile is-child foto notification js-modal-trigger" data-target="modalcarousel" data-aos="fade-up" data-aos-easing="linear" style='background-image: linear-gradient(rgba(95, 2, 2, 0.5), rgba(48, 47, 47, 0.9)), url("{{ $l['foto'] }}")'>
+                    <div class="content" >
+                        <p class="title-foto has-text-centered is-vcentered " style="vertical-align: text-bottom;">
+                        {{ $l['nombre'] }}
+                        </p>
+                        <p class="subtitle-foto has-text-centered is-vcentered"><i class="fas fa-camera"></i> {{ $l['total'] }} Fotografia(s)</p>
+                    </div>
+                    </article>
+                </div>
+                @php $contador++; @endphp
+            @endforeach
+            </div>
+        @else
+            <div class="column is-12 regular-section" data-aos="fade-up" data-aos-easing="linear">
+                <h1 class="title has-text-centered section-title">Próximamente</h1>
+            </div>
+        @endif
 
-
-        <div class="column is-12 regular-section" data-aos="fade-up" data-aos-easing="linear">
-            <h1 class="title has-text-centered section-title">Proximamente</h1>
-        </div>
-
-    {{-- <!-- IMAGES -->
-    <div class=" tile">
-      <div class="tile is-ancestor">
-      <div class="tile is-parent">
-        <article class="tile is-child foto1 notification foto1" data-aos="fade-up" data-aos-easing="linear">
-          <div class="content">
-            <p class="title-foto">November 2018</p>
-            <p class="subtitle-foto">
-              Pertama kali saling kenal di <a href="https://cashbac.com" target="_blank">Cashbac</a>
-            </p>
-          </div>
-        </article>
-      </div>
-      <div class="tile is-parent">
-        <article class="tile is-child notification foto2" data-aos="fade-up" data-aos-easing="linear">
-          <div class="content">
-            <p class="title-foto">
-              Desember 2018 - Februari 2019
-            </p>
-            <p class="subtitle-foto">
-              Satu kantor, satu divisi, dan posisi tempat duduk saling membelakangi.
-            </p>
-          </div>
-        </article>
-      </div>
-      <div class="tile is-parent">
-        <article class="tile is-child notification foto3" data-aos="fade-up" data-aos-easing="linear">
-          <div class="content">
-            <p class="title-foto">
-              Maret 2019
-            </p>
-            <p class="subtitle-foto">
-              Cerita cinta dimulai
-            </p>
-          </div>
-        </article>
-      </div>
-    </div>
-  </div>
-  <div class="space24px"></div>
-  <div class="tile is-ancestor">
-    <div class="tile is-parent">
-      <article class="tile is-child notification foto6" data-aos="fade-up" data-aos-easing="linear">
-        <div class="content">
-          <p class="title-foto">Juni 2019</p>
-          <p class="subtitle-foto">Pertemuan 2 keluarga</p>
-        </div>
-      </article>
-    </div>
-    <div class="tile is-parent">
-      <article class="tile is-child notification foto4" data-aos="fade-up" data-aos-easing="linear">
-        <div class="content">
-          <p class="title-foto">Desember 2019</p>
-          <p class="subtitle-foto">Lamaran</p>
-        </div>
-      </article>
-    </div>
-    <div class="tile is-parent">
-      <article class="tile is-child notification foto5" data-aos="fade-up" data-aos-easing="linear">
-        <div class="content">
-          <p class="title-foto">Maret 2020</p>
-          <p class="subtitle-foto">Menikah</p>
-        </div>
-      </article>
-    </div>
-  </div> --}}
       <!-- IMAGES -->
       <div class="space40px"></div>
         <div data-aos="fade-up" data-aos-easing="linear">
           <img src="image/divider-leaves.png" class="divider has-vertically-align" alt="~~~">
         </div>
-        <button class="button is-success modal-button" data-target="modalfotos" aria-haspopup="true">
-            <i class="fas fa-camera"></i>&nbsp;&nbsp; Subir fotos
-        </button>
+        @if (date("d/m/Y") != '18/03/2023' || date("d/m/Y") == '19/03/2023' || date("d/m/Y") == '20/03/2023' || date("d/m/Y") == '21/03/2023')
+            <button class="button is-success js-modal-trigger" data-target="modalfotos" aria-haspopup="true" data-aos="fade-up" data-aos-easing="linear">
+                <i class="fas fa-camera"></i>&nbsp;&nbsp; Subir fotos
+            </button>
+        @endif
         <div class="space40px"></div>
       </div>
     </div>
   </section>
 
   <!-- End Tentang Sherly dan Daeng -->
+

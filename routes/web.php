@@ -14,13 +14,19 @@ use App\Http\Controllers\invitacionController;
 |
 */
 
-Route::get('/', [invitacionController::class, 'index']);
+Route::get('/', [invitacionController::class, 'index'])->name('index');
+Route::post('/listadoFotos', [invitacionController::class, 'listadoFotos'])->name('fotos.listadoFotos');
+Route::get('/fotos', [invitacionController::class, 'fotos'])->name('fotos');
+Route::get('/fotos/{codigo}', [invitacionController::class, 'fotosSeleccion'])->name('fotoscodigo');
+Route::post('/fotos/estado', [invitacionController::class, 'fotosEstado'])->name('fotos.actualizarFoto');
+Route::post('/fotos/borrar', [invitacionController::class, 'fotosBorrar'])->name('fotos.borrarFoto');
 Route::get('/invitaciones', [invitacionController::class, 'invitaciones'])->name('invitaciones');
 Route::post('/invitaciones/registrar', [invitacionController::class, 'registrar']);
 Route::post('/invitaciones/actualizar', [invitacionController::class, 'actualizar']);
 Route::post('/invitaciones/eliminar', [invitacionController::class, 'eliminar']);
-Route::get('/{codigo}', [invitacionController::class, 'confirmacion'])->name('confirmar');
+Route::post('/{codigo}/cargaFotos', [invitacionController::class, 'cargaFotos']);
 Route::post('/{codigo}/confirmar', [invitacionController::class, 'confirmar']);
+Route::get('/{codigo}', [invitacionController::class, 'confirmacion'])->name('confirmar');
 
 
 // Route::get('/', function () {

@@ -5,11 +5,30 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
 use App\Models\invitacion;
+use App\Models\fotografias;
 
 class invitacionController extends Controller
 {
     public function index(){
-        return view('index');
+        if ((date("d/m/Y") != '18/03/2023' || date("d/m/Y") == '19/03/2023' || date("d/m/Y") == '20/03/2023' || date("d/m/Y") == '21/03/2023')) {
+            $invitados = invitacion::select('nombre', 'codigo')->orderBy('nombre')->get();
+            $listado = array();
+            foreach($invitados as $invitado){
+                $total = fotografias::where('codigo', $invitado->codigo)->count();
+                if($total > 0){
+                    $foto = fotografias::where('codigo', $invitado->codigo)->first();
+                    $total = fotografias::where('codigo', $invitado->codigo)->count();
+                    array_push($listado, array("nombre" => $invitado->nombre,
+                                                "codigo" => $invitado->codigo,
+                                                "foto" => $foto->archivo,
+                                                "total" => $total));
+                }
+            }
+
+            return view('index', ['listado' => $listado]);
+        } else {
+            return view('index');
+        }
     }
 
     public function invitaciones(Request $request){
@@ -35,7 +54,26 @@ class invitacionController extends Controller
         $reg = invitacion::where('codigo', $codigo)->first();
         $reg->confirmacion = true;
         $reg->save();
-        return redirect()->route('confirmar', ['codigo' => $codigo])->with('success','Registro de invitado correcto!');
+        return redirect()->route('confirmar', ['codigo' => $codigo])->with('success','Invitación confirmada!');
+    }
+
+    public function cargaFotos(Request $request, $codigo){
+        if($request->hasfile('archivos'))
+        {
+            foreach($request->file('archivos') as $file)
+            {
+                $name = $file->getClientOriginalName();
+                $extension = $file->getClientOriginalExtension();
+                $name = Str::of($name)->basename('.'.$extension).'_'.time().'.'.$extension;
+                $file->move(public_path().'/fotografias/'.$codigo.'/', $name);
+                $store = new fotografias();
+                $store->codigo = $codigo;
+                $store->archivo = '/fotografias/'.$codigo.'/'.$name;
+                $store->save();
+            }
+            return redirect()->route('confirmar', ['codigo' => $codigo])->with('success', 'Fotos cargadas correctamente!');
+        }
+        return redirect()->route('confirmar', ['codigo' => $codigo]);
     }
 
     public function registrar(Request $request){
@@ -84,4 +122,53 @@ class invitacionController extends Controller
         return $codigo;
     }
 
+    public function fotos(){
+        $invitados = invitacion::select('nombre', 'codigo')->orderBy('nombre')->get();
+
+        $listado = array();
+
+        foreach($invitados as $invitado){
+            $total = fotografias::where('codigo', $invitado->codigo)->count();
+            if($total > 0){
+                $fotos = fotografias::where('codigo', $invitado->codigo)->get();
+                $pendientes = fotografias::where('codigo', $invitado->codigo)->where('visible', 0)->count();
+                $aceptadas = fotografias::where('codigo', $invitado->codigo)->where('visible', 1)->count();
+                array_push($listado, array("nombre" => $invitado->nombre,
+                                            'codigo' => $invitado->codigo,
+                                            'pendientes' => $pendientes,
+                                            'aceptadas' => $aceptadas,
+                                            "fotos" => $fotos));
+            }
+        }
+
+        return view('listadofotografias')->with('listado', $listado);
+    }
+
+    public function fotosSeleccion(Request $request, $codigo){
+        $fotos = fotografias::where('codigo', $codigo)->get();
+        $datos = invitacion::where('codigo', $codigo)->first();
+        return view('listadofotoscodigo')->with(['fotos' => $fotos, 'datos' => $datos]);
+    }
+
+    public function fotosEstado(Request $request){
+        $foto = fotografias::where('id', $request->id)->first();
+        $foto->visible = $request->estado;
+        if($foto->save()){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    public function fotosBorrar(Request $request){
+        $foto = fotografias::where('id', $request->idborrar)->first();
+        $codigo = $foto->codigo;
+        $foto->delete();
+        return redirect()->route('fotoscodigo', ['codigo' => $codigo] )->with('success','Foto borrada correctamente!');
+    }
+
+    public function listadoFotos(Request $request){
+        $fotos = fotografias::select('archivo')->where('visible', 1)->where('codigo', $request->codigo)->get();
+        return $fotos->toJson();
+    }
 }

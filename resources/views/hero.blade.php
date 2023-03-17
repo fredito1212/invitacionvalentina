@@ -2,7 +2,7 @@
 <div class="hero-body">
     <div class="container has-text-centered">
       <h1 class="subtitle">Mi Bautizo</h1>
-      <h2 class="title">Aislin Valentina<br>Bravo Andrade</h2>
+      <h2 class="title">Aislin Valentina<br>Andrade Bravo</h2>
       <h4 class="subtitle tempatwaktu">
 
           Sabado 18 Marzo 2023
