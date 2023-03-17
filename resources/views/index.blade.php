@@ -93,39 +93,7 @@
             <div class="modal-background"></div>
             <div class="modal-content" id='contenido'>
                 <div id="owl-demo" class="owl-carousel owl-theme">
-                    <div class="item">
-                        <img src="https://picsum.photos/350/200" alt="" />
-                    </div>
-                    <div class="item">
-                        <img src="https://picsum.photos/350/200" alt="" />
-                    </div>
-                    <div class="item">
-                        <img src="https://picsum.photos/350/200" alt="" />
-                    </div>
-                    <div class="item">
-                        <img src="https://picsum.photos/350/200" alt="" />
-                    </div>
-                    <div class="item">
-                        <img src="https://picsum.photos/350/200" alt="" />
-                    </div>
-                    <div class="item">
-                        <img src="https://picsum.photos/350/200" alt="" />
-                    </div>
-                    <div class="item">
-                        <img src="https://picsum.photos/350/200" alt="" />
-                    </div>
-                    <div class="item">
-                        <img src="https://picsum.photos/350/200" alt="" />
-                    </div>
-                    <div class="item">
-                        <img src="https://picsum.photos/350/200" alt="" />
-                    </div>
-                    <div class="item">
-                        <img src="https://picsum.photos/350/200" alt="" />
-                    </div>
-                    <div class="item">
-                        <img src="https://picsum.photos/350/200" alt="" />
-                    </div>
+
                 </div>
             </div>
             <button class="modal-close is-large" aria-label="close"></button>
@@ -169,12 +137,14 @@
                                         Selecciona tus archivos
                                     </span>
                                 </span>
-                                <span class="file-name">
-
-                                </span>
+                                <span class="file-name"></span>
                             </label>
                         </div>
-
+                        <div class="mt-4">
+                            <p style="font-size:12px;"><strong  class="has-text-danger">
+                                NOTA: Las fotografías compartidas serán públicas en este sitio bajo el nombre del invitado, ten cuidado con el contenido que compartiras.
+                            </strong></p>
+                        </div>
                 </section>
                 <footer class="modal-card-foot">
                     <a class="button is-success" onclick="validateFileType()"><i
@@ -195,28 +165,24 @@
     {{-- <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/js/bulma-carousel.min.js"></script> --}}
     <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
     <script>
-
-        // var slideIndex = 1;
-        // showSlides(slideIndex);
-
-        // function plusSlides(n) {
-        //     showSlides(slideIndex += n);
-        // }
-
-        // function currentSlide(n) {
-        //     showSlides(slideIndex = n);
-        // }
-
-        // function showSlides(n) {
-        //     var i;
-        //     var slides = document.getElementsByClassName("item-slide");
-        //     if (n > slides.length) {slideIndex = 1}
-        //     if (n < 1) {slideIndex = slides.length}
-        //     for (i = 0; i < slides.length; i++) {
-        //         slides[i].style.display = "none";
-        //     }
-        // }
-
+        @if (isset($datos) && !$datos->confirmacion)
+            Swal.fire({
+                title: 'Confirmar asistencia',
+                text: "Recuerda confirmar tu asistencia para ver toda la información. ¿Deseas confirmar ahora?",
+                icon: 'info',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Si, ir a confirmar',
+                cancelButtonText: 'No, en otro momento'
+            }).then((result) => {
+                if(result.value === true){
+                    var element = document.getElementById("rsvp");
+                    element.scrollIntoView();
+                    // $.scrollTo($('#rsvp'), 1000);
+                }
+            });
+        @endif
 
         AOS.init({
             easing: "ease-out",

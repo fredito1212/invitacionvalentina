@@ -5,7 +5,7 @@
       <div class="column has-text-centered is-12 prolog">
         <h1 class="title has-text-centered section-title" data-aos="fade-up" data-aos-easing="linear"><i class="fa-solid fa-heart fa-beat"></i> Mis fotos</h1>
 
-        @if (date("d/m/Y") != '18/03/2023' || date("d/m/Y") == '19/03/2023' || date("d/m/Y") == '20/03/2023' || date("d/m/Y") == '21/03/2023')
+        @if (date("d/m/Y") == '18/03/2023' || date("d/m/Y") == '19/03/2023' || date("d/m/Y") == '20/03/2023' || date("d/m/Y") == '21/03/2023')
             @php
                 $rand = rand(1,3);
                 $contador = 0;
@@ -52,10 +52,12 @@
         <div data-aos="fade-up" data-aos-easing="linear">
           <img src="image/divider-leaves.png" class="divider has-vertically-align" alt="~~~">
         </div>
-        @if (date("d/m/Y") != '18/03/2023' || date("d/m/Y") == '19/03/2023' || date("d/m/Y") == '20/03/2023' || date("d/m/Y") == '21/03/2023')
-            <button class="button is-success js-modal-trigger" data-target="modalfotos" aria-haspopup="true" data-aos="fade-up" data-aos-easing="linear">
-                <i class="fas fa-camera"></i>&nbsp;&nbsp; Subir fotos
-            </button>
+        @if (isset($datos))
+            @if (date("d/m/Y") != '18/03/2023' || date("d/m/Y") == '19/03/2023' || date("d/m/Y") == '20/03/2023' || date("d/m/Y") == '21/03/2023')
+                <button class="button is-success js-modal-trigger" data-target="modalfotos" aria-haspopup="true" data-aos="fade-up" data-aos-easing="linear">
+                    <i class="fas fa-camera"></i>&nbsp;&nbsp; Subir fotos
+                </button>
+            @endif
         @endif
         <div class="space40px"></div>
       </div>

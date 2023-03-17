@@ -10,7 +10,7 @@ use App\Models\fotografias;
 class invitacionController extends Controller
 {
     public function index(){
-        if ((date("d/m/Y") != '18/03/2023' || date("d/m/Y") == '19/03/2023' || date("d/m/Y") == '20/03/2023' || date("d/m/Y") == '21/03/2023')) {
+        if ((date("d/m/Y") == '18/03/2023' || date("d/m/Y") == '19/03/2023' || date("d/m/Y") == '20/03/2023' || date("d/m/Y") == '21/03/2023')) {
             $invitados = invitacion::select('nombre', 'codigo')->orderBy('nombre')->get();
             $listado = array();
             foreach($invitados as $invitado){
@@ -31,6 +31,29 @@ class invitacionController extends Controller
         }
     }
 
+    public function confirmacion($codigo){
+        if(invitacion::where('codigo', $codigo)->exists()){
+            if ((date("d/m/Y") == '18/03/2023' || date("d/m/Y") == '19/03/2023' || date("d/m/Y") == '20/03/2023' || date("d/m/Y") == '21/03/2023')) {
+                $invitados = invitacion::select('nombre', 'codigo')->orderBy('nombre')->get();
+                $listado = array();
+                foreach($invitados as $invitado){
+                    $total = fotografias::where('codigo', $invitado->codigo)->count();
+                    if($total > 0){
+                        $foto = fotografias::where('codigo', $invitado->codigo)->first();
+                        $total = fotografias::where('codigo', $invitado->codigo)->count();
+                        array_push($listado, array("nombre" => $invitado->nombre,
+                                                    "codigo" => $invitado->codigo,
+                                                    "foto" => $foto->archivo,
+                                                    "total" => $total));
+                    }
+                }
+            }
+            $datos = invitacion::where('codigo', $codigo)->first();
+            return view('index', ['codigo' => True, 'datos' => $datos, 'listado' => $listado]);
+        }
+        return view('index', ['codigo' => False]);
+    }
+
     public function invitaciones(Request $request){
         $datos = invitacion::all();
         $confirmados = invitacion::where('confirmacion', 1)->count();
@@ -40,14 +63,6 @@ class invitacionController extends Controller
             $total += $d->invitados;
         }
         return view('listadoInvitacion', ['datos' => $datos, 'invitados' => $invitados, 'confirmados' => $confirmados, 'total' => $total]);
-    }
-
-    public function confirmacion($codigo){
-        if(invitacion::where('codigo', $codigo)->exists()){
-            $datos = invitacion::where('codigo', $codigo)->first();
-            return view('index', ['codigo' => True, 'datos' => $datos]);
-        }
-        return view('index', ['codigo' => False]);
     }
 
     public function confirmar(Request $request, $codigo){
