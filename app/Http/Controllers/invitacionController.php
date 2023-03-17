@@ -47,6 +47,8 @@ class invitacionController extends Controller
                                                     "total" => $total));
                     }
                 }
+            }else{
+                $listado = array();
             }
             $datos = invitacion::where('codigo', $codigo)->first();
             return view('index', ['codigo' => True, 'datos' => $datos, 'listado' => $listado]);
