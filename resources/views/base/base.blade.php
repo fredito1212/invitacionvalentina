@@ -21,6 +21,7 @@
     <link href="https://unpkg.com/pattern.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/f33271c8b6.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/html5-qrcode" type="text/javascript">
 
     <script src="{{ asset('js/jquery.coundown.js') }}"></script>
     <link rel="icon" type="{{ asset('image/png') }}" href="image/favicon.png" />
@@ -60,6 +61,10 @@
 
             <a class="navbar-item" href="{!! route('fotos') !!}">
               <i class="fas fa-camera"></i>&nbsp;&nbsp;Fotografias
+            </a>
+
+            <a class="navbar-item" href="{!! route('asistencia') !!}">
+              <i class="fas fa-check"></i>&nbsp;&nbsp;Llegada al evento
             </a>
 
           </div>

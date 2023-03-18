@@ -31,16 +31,17 @@ class invitacionController extends Controller
         }
     }
 
-    public function confirmacion($codigo){
+    public function confirmacion(Request $request, $codigo){
         if(invitacion::where('codigo', $codigo)->exists()){
-            if ((date("d/m/Y") == '18/03/2023' || date("d/m/Y") == '19/03/2023' || date("d/m/Y") == '20/03/2023' || date("d/m/Y") == '21/03/2023')) {
+            $debug = $request->debug;
+            if ((date("d/m/Y") == '18/03/2023' || date("d/m/Y") == '19/03/2023' || date("d/m/Y") == '20/03/2023' || date("d/m/Y") == '21/03/2023' || $debug == true)) {
                 $invitados = invitacion::select('nombre', 'codigo')->orderBy('nombre')->get();
                 $listado = array();
                 foreach($invitados as $invitado){
-                    $total = fotografias::where('codigo', $invitado->codigo)->count();
+                    $total = fotografias::where('codigo', $invitado->codigo)->where('visible', true)->count();
                     if($total > 0){
-                        $foto = fotografias::where('codigo', $invitado->codigo)->first();
-                        $total = fotografias::where('codigo', $invitado->codigo)->count();
+                        $foto = fotografias::where('codigo', $invitado->codigo)->where('visible', true)->first();
+                        $total = fotografias::where('codigo', $invitado->codigo)->where('visible', true)->count();
                         array_push($listado, array("nombre" => $invitado->nombre,
                                                     "codigo" => $invitado->codigo,
                                                     "foto" => $foto->archivo,
@@ -187,5 +188,30 @@ class invitacionController extends Controller
     public function listadoFotos(Request $request){
         $fotos = fotografias::select('archivo')->where('visible', 1)->where('codigo', $request->codigo)->get();
         return $fotos->toJson();
+    }
+
+    public function asistencia(){
+        return view('asistenciaQr');
+    }
+
+    public function asistenciaConfirmar(Request $request){
+        $codigo = $request->codigo;
+        $reg = invitacion::where('codigo', $codigo)->first();
+
+        if($reg->llegada == true){
+            $icono = 'warning';
+            $message = 'El invitado ya ha llegado anteriormente!';
+        }else{
+            $reg->llegada = true;
+            try {
+                $reg->save();
+                $icono = 'success';
+                $message = 'Llegada confirmada con exito';
+            } catch (\Throwable $th) {
+                $icono = 'error';
+                $message = 'El codigo de invitado no existe';
+            }
+        }
+        return json_encode(['icono' => $icono, 'message' => $message]);
     }
 }

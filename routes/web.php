@@ -24,6 +24,8 @@ Route::get('/invitaciones', [invitacionController::class, 'invitaciones'])->name
 Route::post('/invitaciones/registrar', [invitacionController::class, 'registrar']);
 Route::post('/invitaciones/actualizar', [invitacionController::class, 'actualizar']);
 Route::post('/invitaciones/eliminar', [invitacionController::class, 'eliminar']);
+Route::get('/asistencia', [invitacionController::class, 'asistencia'])->name('asistencia');
+Route::post('/asistencia', [invitacionController::class, 'asistenciaConfirmar'])->name('asistencia.confirmar');
 Route::post('/{codigo}/cargaFotos', [invitacionController::class, 'cargaFotos']);
 Route::post('/{codigo}/confirmar', [invitacionController::class, 'confirmar']);
 Route::get('/{codigo}', [invitacionController::class, 'confirmacion'])->name('confirmar');

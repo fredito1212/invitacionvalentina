@@ -11,6 +11,11 @@
                 $contador = 0;
             @endphp
             {{-- {{ $rand }} --}}
+            @if (isset($datos))
+                <div class="column is-12 regular-section" data-aos="fade-up" data-aos-easing="linear">
+                    <h1 class="title has-text-centered section-title is-capitalized">Comparte tus fotografías con todos, usa el botón de <a href="#botonSubirFotos">"Subir fotos"</a></h1>
+                </div>
+            @endif
             <div class="tile is-ancestor">
             @foreach ($listado as $l)
                 @if ($rand == $contador)
@@ -49,12 +54,12 @@
 
       <!-- IMAGES -->
       <div class="space40px"></div>
-        <div data-aos="fade-up" data-aos-easing="linear">
+        <div data-aos="fade-up" data-aos-easing="linear" id="botonSubirFotos">
           <img src="image/divider-leaves.png" class="divider has-vertically-align" alt="~~~">
         </div>
         @if (isset($datos))
-            @if (date("d/m/Y") != '18/03/2023' || date("d/m/Y") == '19/03/2023' || date("d/m/Y") == '20/03/2023' || date("d/m/Y") == '21/03/2023')
-                <button class="button is-success js-modal-trigger" data-target="modalfotos" aria-haspopup="true" data-aos="fade-up" data-aos-easing="linear">
+            @if (date("d/m/Y") == '18/03/2023' || date("d/m/Y") == '19/03/2023' || date("d/m/Y") == '20/03/2023' || date("d/m/Y") == '21/03/2023')
+                <button  class="button is-success js-modal-trigger" data-target="modalfotos" aria-haspopup="true" data-aos="fade-up" data-aos-easing="linear">
                     <i class="fas fa-camera"></i>&nbsp;&nbsp; Subir fotos
                 </button>
             @endif
